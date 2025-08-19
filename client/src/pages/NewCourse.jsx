@@ -557,7 +557,7 @@ const NewCourse = () => {
                   '&:hover': { backgroundColor: "#574fd6" }
                 }}
               >
-                Submit Course
+                Submit
               </Button>
               <p className="text-center ">It will take 5-10 seconds to upload, please be patient.</p>
             </form>

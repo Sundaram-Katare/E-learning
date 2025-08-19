@@ -498,7 +498,7 @@ const NewCourse = () => {
 
               {/* PDFs */}
               <div className="mt-4">
-                <h2 className="mb-2 font-medium dark:text-blue-300 text-purple-700">
+                <h2 className="mb-2 font-medium dark:text-blue-600 text-purple-700">
                   PDF Materials
                 </h2>
                 <TextField
@@ -508,9 +508,10 @@ const NewCourse = () => {
                   value={mediaType}
                   onChange={(e) => setMediaType(e.target.value)}
                   className="mb-3"
+                  placeholder="Select media type"
                 >
                   {/* <MenuItem value="url">URLs</MenuItem> */}
-                  <MenuItem value="upload">Upload Files</MenuItem>
+                  <MenuItem value="upload" placeholder="Upload Files">Upload Files</MenuItem>
                 </TextField>
                 <TextField
                   label="How many?"
@@ -558,6 +559,7 @@ const NewCourse = () => {
               >
                 Submit Course
               </Button>
+              <p className="text-center ">It will take 5-10 seconds to upload, please be patient.</p>
             </form>
           </motion.div>
 

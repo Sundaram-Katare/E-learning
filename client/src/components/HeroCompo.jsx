@@ -37,7 +37,7 @@ const HeroCompo = () => {
                         </div>
 
                         <p className="mt-4 text-sm sm:text-base dark:text-gray-300 font-light font-roboto">
-                            Our e-learning programs have been developed to be a vehicle
+                            Learnzo have been developed to be a vehicle
                             <br className="hidden sm:block" />
                             of delivering knowledge and skills to learners worldwide.
                         </p>
@@ -45,10 +45,10 @@ const HeroCompo = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-10 mt-6 sm:mt-4 justify-items-center md:justify-items-start">
                             <CustomButton text="Start" route={user ? "courses": "signup"} />
 
-                            <div className="dark:text-white">
+                            {/* <div className="dark:text-white">
                                 <h2 className="font-semibold text-3xl sm:text-4xl">{count}+</h2>
                                 <p className="font-light">Career Courses</p>
-                            </div>
+                            </div> */}
                         </div>
                     </motion.div>
 

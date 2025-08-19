@@ -5,6 +5,8 @@ import { GiTeacher } from "react-icons/gi";
 import videoSource from "../assets/video.mp4";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "./Button";
+import { SiGoogledocs } from "react-icons/si";
+
 const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -23,7 +25,7 @@ const AddCourse = () => {
                     className="flex flex-col justify-center items-center gap-4"
                 >
                     <motion.h1
-                        className="text-3xl md:text-5xl lg:text-6xl font-semibold dark:text-yellow-400 text-center"
+                        className="text-3xl md:text-5xl lg:text-6xl font-semibold dark:text-orange-400 text-center"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
@@ -63,20 +65,17 @@ const AddCourse = () => {
                             </div>
                         </motion.div>
                     </div>
-                    <CustomButton text="Add Course" route="add-course" />
+                    <CustomButton text="Add Docs" route="add-course" />
                 </motion.div>
                 
                 <motion.div
-                    className="flex justify-center items-center w-full max-h-72 md:max-h-96 lg:max-h-[32rem] overflow-hidden rounded-xl shadow-lg"
+                    className="flex justify-center items-center w-full max-h-72 md:max-h-96 lg:max-h-[32rem] overflow-hidden "
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <video controls className="w-full h-auto md:h-full object-cover rounded-xl max-w-lg md:max-w-xl lg:max-w-2xl">
-                        <source src={videoSource} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
+                    <SiGoogledocs size={480} className="dark:text-white"/>
                 </motion.div>
             </div>
         </div>

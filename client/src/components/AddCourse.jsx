@@ -48,7 +48,7 @@ const AddCourse = () => {
                         >
                             <FaPeopleGroup size={40} />
                             <div>
-                                <h2 className="text-xl md:text-2xl font-semibold text-orange-500 dark:text-blue-500">Reach Students</h2>
+                                <h2 className="text-xl md:text-2xl font-semibold text-orange-500 dark:text-blue-500">Reach Learners</h2>
                                 <p className="font-light">Connect with learners globally and share your knowledge.</p>
                             </div>
                         </motion.div>

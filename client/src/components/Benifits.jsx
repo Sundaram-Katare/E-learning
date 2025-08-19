@@ -1,32 +1,34 @@
 import Card from "./Card";
 import { ImBooks } from "react-icons/im";
-import { GiMoneyStack } from "react-icons/gi";
-import { BsPersonRaisedHand } from "react-icons/bs";
+import { IoIosCloudDownload } from "react-icons/io";
+import { FaEarthAmericas } from "react-icons/fa6";
+import { TbAccessPoint } from "react-icons/tb";
+
 
 const benifits = [
   {
-    icon: <ImBooks size={70} />,
-    title: "Quality Education",
+    icon: <IoIosCloudDownload size={70} />,
+    title: "Cloud-Powered Storage",
     description:
-      "Our platform delivers high-quality education through expertly designed courses that combine theoretical knowledge with practical application. We ensure every learner gains a deep understanding of the subject matter.",
-  },
-  {
-    icon: <GiMoneyStack size={70} />,
-    title: "Affordable Prices",
-    description:
-      "We believe education should be accessible to everyone. That’s why our courses are priced affordably, offering exceptional value without compromising on quality or depth.",
-  },
-  {
-    icon: <BsPersonRaisedHand size={70} />,
-    title: "Expert Instructors",
-    description:
-      "Learn from seasoned professionals and industry leaders who bring real-world experience into the classroom. Our instructors are passionate about teaching and committed to your success.",
+      "All documents are stored safely on Cloudinary, ensuring high availability.",
   },
   {
     icon: <ImBooks size={70} />,
-    title: "Learn at Your Pace",
+    title: "Free & Open Knowledge Sharing",
     description:
-      "Our flexible course structure allows you to learn whenever and wherever it suits you. Whether you're a full-time student or a working professional, you can progress at your own speed.",
+      "Learn from a wide range of user-uploaded docs without hidden paywalls.",
+  },
+  {
+    icon: <FaEarthAmericas size={70} />,
+    title: "Community Driven",
+    description:
+      "Anyone can upload study material, making Learnzo a collaborative learning hub.",
+  },
+  {
+    icon: <TbAccessPoint size={70} />,
+    title: "Easy Access Anywhere",
+    description:
+      "Access docs anytime, anywhere – no need for downloads.",
   },
 ];
 

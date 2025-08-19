@@ -27,7 +27,7 @@ const Courses = () => {
       <Navbar />
       <div className="min-h-screen p-4 sm:p-8 lg:p-12 xl:p-16 dark:bg-transparent dark:text-white max-w-7xl mx-auto">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent dark:text-white">
-          Available Courses
+          Available Resources
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
           {courses.length === 0 ? (

@@ -42,7 +42,7 @@ const Navbar = () => {
       <div className="hidden md:flex justify-between items-center space-x-10 text-lg font-light">
         <h2 className="hover:text-orange-500 cursor-pointer" onClick={() => navigate("/")}>Home</h2>
         <h2 className="hover:text-orange-500 cursor-pointer" onClick={() => navigate("/category")}>Category</h2>
-        <h2 className="hover:text-orange-500 cursor-pointer" onClick={() => navigate("/courses")}>Courses</h2>
+        <h2 className="hover:text-orange-500 cursor-pointer" onClick={() => navigate("/courses")}>Resources</h2>
         <h2 onClick={() => setLightMode(!lightMode)} className="cursor-pointer">
           <CiLight className={`transition duration-300 ${lightMode ? "text-black" : "text-yellow-400"}`} size={35} />
         </h2>

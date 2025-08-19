@@ -10,12 +10,14 @@ const CourseDetails = () => {
   const [course, setCourse] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const API_URL = import.meta.env.VITE_API_URL || "https://server-production-2084.up.railway.app";
+
   useEffect(() => {
     const fetchCourse = async () => {
       try {
         await new Promise((resolve) => setTimeout(resolve, 1000));
         const { data } = await axios.get(
-          `http://localhost:3000/api/courses/${id}`
+          `${API_URL}/api/courses/${id}`
         );
         setCourse(data.course);
         setLoading(false);

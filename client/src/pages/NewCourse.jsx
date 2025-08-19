@@ -314,6 +314,8 @@ const NewCourse = () => {
   const [pdfUrls, setPdfUrls] = useState([""]);
   const [pdfFiles, setPdfFiles] = useState([null]);
 
+  const API_URL = import.meta.env.VITE_API_URL || "https://server-production-2084.up.railway.app";
+
   // Handle simple fields
   const handleChange = (e) => {
     setFormData({
@@ -392,7 +394,7 @@ const NewCourse = () => {
     }
 
     try {
-      await axios.post("http://localhost:3000/api/courses/add", data, {
+      await axios.post(`${API_URL}/api/courses/add`, data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert("Course Created Successfully!");

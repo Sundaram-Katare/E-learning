@@ -12,6 +12,8 @@ const Signup = () => {
   const [flipped, setFlipped] = useState(true);
   const { user, setUser } = useAuth();
 
+  const API_URL = import.meta.env.VITE_API_URL || "https://server-production-2084.up.railway.app";
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -27,7 +29,7 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`http://localhost:3000/api/auth/register`, formData);
+      const res = await axios.post(`${API_URL}/api/auth/register`, formData);
       toast.success('Signup successful!');
 
       localStorage.setItem('token', res.data.token);
@@ -42,7 +44,7 @@ const Signup = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`http://localhost:3000/api/auth/login`, formData);
+      const res = await axios.post(`${API_URL}/api/auth/login`, formData);
       toast.success('Login successful!');
 
       localStorage.setItem('token', res.data.token);
@@ -169,7 +171,7 @@ const Signup = () => {
               >
                 <option value="">Select role</option>
                 <option value="learner">Learner</option>
-                <option value="instructor">Instructor</option>
+                {/* <option value="instructor">Instructor</option> */}
               </select>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-6">

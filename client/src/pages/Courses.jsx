@@ -8,11 +8,12 @@ import AddCourse from "../components/AddCourse";
 
 const Courses = () => {
   const [courses, setCourses] = useState([]);
+  const API_URL = import.meta.env.VITE_API_URL || "https://server-production-2084.up.railway.app";
 
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/api/courses");
+        const { data } = await axios.get(`${API_URL}/api/courses`);
         setCourses(data.courses);
       } catch (error) {
         console.error("Error fetching courses:", error);

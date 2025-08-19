@@ -16,6 +16,7 @@ const courseSchema = new mongoose.Schema(
     domain: { type: String, required: true },
     duration: { type: String, required: true },
     thumbnail: { type: String, required: true },
+    addedBy: { type: String, required: true },
 
     pdfs: [{ type: String }], // only for pdf categories
     videos: [{ type: String }], // only for video categories

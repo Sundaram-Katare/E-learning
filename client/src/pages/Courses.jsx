@@ -44,6 +44,7 @@ const Courses = () => {
                   title={course.title}
                   image={course.thumbnail}
                   duration={course.duration}
+                  addedBy={course.addedBy}
                 />
               </motion.div>
             ))

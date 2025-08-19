@@ -4,7 +4,7 @@ import { IoMdTime } from "react-icons/io";
 import { IoIosPaper } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 
-const CourseCard = ({ id, title, image, duration }) => {
+const CourseCard = ({ id, title, image, duration, addedBy }) => {
   const navigate = useNavigate();
 
   return (
@@ -41,6 +41,8 @@ const CourseCard = ({ id, title, image, duration }) => {
           precision={0.1}
           sx={{ color: "#00a4e4ff" }}
         /> */}
+
+        <p>Added By: {addedBy}</p>
       </div>
     </motion.div>
   );

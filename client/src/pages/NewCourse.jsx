@@ -301,6 +301,7 @@ const NewCourse = () => {
     description: "",
     domain: "",
     duration: "",
+    addedBy: "",
   });
 
   // Thumbnail: can be either file or URL (separate state)
@@ -396,7 +397,7 @@ const NewCourse = () => {
       });
       alert("Course Created Successfully!");
       // Reset
-      setFormData({ title: "", description: "", domain: "", duration: "" });
+      setFormData({ title: "", description: "", domain: "", duration: "", addedBy: "" });
       setThumbnailFile(null);
       setThumbnailUrl("");
       setMediaType("url");
@@ -462,6 +463,16 @@ const NewCourse = () => {
                 onChange={handleChange}
               />
 
+              <TextField
+                label="Added By"
+                variant="outlined"
+                fullWidth
+                name="addedBy"
+                placeholder="e.g. John Doe, your name"
+                value={formData.addedBy}
+                onChange={handleChange}
+              />
+
               {/* Thumbnail */}
               <div>
                 <label className="block mb-1 text-sm dark:text-gray-400 text-gray-700">
@@ -473,14 +484,14 @@ const NewCourse = () => {
                   className="mb-2"
                   onChange={handleThumbnailFileChange}
                 />
-                <p className="text-xs mb-1 dark:text-gray-400 text-gray-600">Or paste URL:</p>
+                {/* <p className="text-xs mb-1 dark:text-gray-400 text-gray-600">Or paste URL:</p>
                 <TextField
                   variant="outlined"
                   fullWidth
                   value={thumbnailUrl}
                   onChange={handleThumbnailUrlChange}
                   placeholder="https://example.com/image.jpg"
-                />
+                /> */}
               </div>
 
               {/* PDFs */}
@@ -496,7 +507,7 @@ const NewCourse = () => {
                   onChange={(e) => setMediaType(e.target.value)}
                   className="mb-3"
                 >
-                  <MenuItem value="url">URLs</MenuItem>
+                  {/* <MenuItem value="url">URLs</MenuItem> */}
                   <MenuItem value="upload">Upload Files</MenuItem>
                 </TextField>
                 <TextField
@@ -511,25 +522,25 @@ const NewCourse = () => {
                 />
                 {mediaType === "url"
                   ? Array.from({ length: mediaCount }).map((_, i) => (
-                      <TextField
-                        key={i}
-                        label={`PDF URL ${i + 1}`}
-                        variant="outlined"
-                        fullWidth
-                        className="mb-2"
-                        value={pdfUrls[i] || ""}
-                        onChange={(e) => handlePdfUrlChange(e, i)}
-                      />
-                    ))
+                    <TextField
+                      key={i}
+                      label={`PDF URL ${i + 1}`}
+                      variant="outlined"
+                      fullWidth
+                      className="mb-2"
+                      value={pdfUrls[i] || ""}
+                      onChange={(e) => handlePdfUrlChange(e, i)}
+                    />
+                  ))
                   : Array.from({ length: mediaCount }).map((_, i) => (
-                      <input
-                        key={i}
-                        type="file"
-                        accept="application/pdf"
-                        className="mb-2"
-                        onChange={(e) => handlePdfFileChange(e, i)}
-                      />
-                    ))}
+                    <input
+                      key={i}
+                      type="file"
+                      accept="application/pdf"
+                      className="mb-2"
+                      onChange={(e) => handlePdfFileChange(e, i)}
+                    />
+                  ))}
               </div>
 
               <Button

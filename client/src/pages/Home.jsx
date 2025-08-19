@@ -1,7 +1,7 @@
 import Benifits from "../components/Benifits";
 import HeroCompo from "../components/HeroCompo";
 import Navbar from "../components/Navbar";
-import Courses from "../components/Courses";
+// import Courses from "../components/Courses";
 import AddCourse from "../components/AddCourse";
 // import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
@@ -11,7 +11,7 @@ const Home = () => {
     <div>
       <Navbar />
       <HeroCompo />
-      <Courses />
+      {/* <Courses /> */}
       <Benifits />
       <AddCourse />
       {/* <Testimonial /> */}

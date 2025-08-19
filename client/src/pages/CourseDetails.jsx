@@ -80,6 +80,8 @@ const CourseDetails = () => {
             <p className="bg-purple-300 p-2 rounded-xl dark:text-black">
               <strong>Price (INR):</strong> {/*{course.price?.inr}*/} Free
             </p>
+
+            <p><strong>Added By:</strong> {course.addedBy}</p>
           </div>
 
           {/* PDFs Section */}

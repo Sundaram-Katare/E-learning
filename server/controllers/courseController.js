@@ -10,6 +10,7 @@ export const addCourse = async (req, res) => {
       domain,
       duration,
       pdfUrls,
+      addedBy,
       // videoUrls,
     } = req.body;
 
@@ -92,6 +93,7 @@ export const addCourse = async (req, res) => {
       domain,
       duration,
       thumbnail: thumbnailUrl,
+      addedBy,
       pdfs,
       // videos,
       createdBy: req.user?._id,
@@ -154,3 +156,4 @@ export const countCoursesByUser = async (req, res) => {
     res.status(500).json({ success: false, message: "Error counting courses" });
   }
 };
+

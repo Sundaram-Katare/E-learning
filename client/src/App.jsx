@@ -9,6 +9,7 @@ import CourseDetails from './pages/CourseDetails';
 import VideoCourses from './pages/VideoCourses';
 import { AuthProvider } from './context/AuthContext';
 import Profile from './pages/Profile';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
         </div>
       </div>
       </AuthProvider>
+      <Analytics />
     </>
   )
 }

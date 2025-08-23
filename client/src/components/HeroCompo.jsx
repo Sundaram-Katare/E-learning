@@ -31,9 +31,9 @@ const HeroCompo = () => {
                                 transition={{ duration: 0.8 }}  
                     >
                         <div className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl dark:text-white">
-                            <span className="block mb-2">Investing in</span>
-                            <span className="block mt-2 mb-2">Knowledge and</span>
-                            <span className="block text-orange-500 dark:text-orange-400">Your Future</span>
+                            <span className="block mb-2">Share Docs</span>
+                            <span className="block mt-2 mb-2">and Spread</span>
+                            <span className="block text-orange-500 dark:text-orange-400">Knowledge</span>
                         </div>
 
                         <p className="mt-4 text-sm sm:text-base dark:text-gray-300 font-light font-roboto">
